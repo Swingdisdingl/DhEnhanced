@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
     LoadingTitle = "DaHood-Enhanced",
     LoadingSubtitle = "by 7rxp",
     ConfigurationSaving = {
-       Enabled = true,
+       Enabled = false,
        FolderName = "DH-Enhanced",
        FileName = "DH-Enhanced-Settings"
     },
