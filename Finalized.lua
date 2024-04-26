@@ -1,11 +1,8 @@
 --Finalized
 repeat wait() until game:IsLoaded()
 
-getgenv().NotificationColor = Color3.fromRGB(231, 156, 55)
-
 --local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcaneAw/UIS/main/ModdedBackupV1.lua"))()
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcaneAw/UIS/main/ModdedBackupV2.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcaneAw/Locking/main/AAV/DhEnhancedAntiNotification.lua"))()
 
 Library.theme.fontsize = 15
 Library.theme.titlesize = 17
@@ -1299,14 +1296,16 @@ table.insert(Keybinds,Keybind18)
 
 Visualize = false
 VisualizeColor = Color3.fromRGB(255, 0, 125)
-AntiAimSec:AddToggle("Visualize", false, function(Boolean)
+local Visualizenigga = AntiAimSec:AddToggle("Visualize", false, function(Boolean)
     Visualize = Boolean
     local realstate = Boolean and "Enabled" or "Disabled"
     if getgenv().SendNotifs then
             notify("Velocity Visualizer "..realstate,getgenv().NotificationColor,2,false)
     end
-end
-):AddColorpicker(Color3.fromRGB(203, 9, 61), function(Color)
+end)
+table.insert(Toggles,Visualizenigga)
+
+Visualizenigga:AddColorpicker(Color3.fromRGB(203, 9, 61), function(Color)
     VisualizeColor = Color
 end)
 
@@ -1475,14 +1474,16 @@ local Slider37 = CursorSec:AddSlider("Spinning Cursor Speed", 0, 1, 50, 1, funct
 end)
 table.insert(Sliders,Slider37)
 
-CursorSec:AddToggle("Hakenkreuz", false, function(Boolean)
+local SwastikaTog = CursorSec:AddToggle("Hakenkreuz", false, function(Boolean)
     Swastika.Visible = Boolean
     local realstate = Boolean and "Enabled" or "Disabled"
     if getgenv().SendNotifs then
             notify("Hakenkreuz "..realstate,getgenv().NotificationColor,2,false)
     end
-end
-):AddColorpicker(Color3.fromRGB(255, 255, 255), function(Color)
+end)
+table.insert(Toggles,SwastikaTog)
+
+SwastikaTog:AddColorpicker(Color3.fromRGB(255, 255, 255), function(Color)
     Swastika.TextColor3 = Color
 end)
 
@@ -1512,14 +1513,16 @@ local Slider38 = CursorSec:AddSlider("Hakenkreuz Spin Speed", 0, 1, 5, 1, functi
 end)
 table.insert(Sliders,Slider38)
 
-WorldVisual:AddToggle("Bullet Tracers", false, function(Boolean)
+local BulletTog = WorldVisual:AddToggle("Bullet Tracers", false, function(Boolean)
     BulletTracers = Boolean
     local realstate = Boolean and "Enabled" or "Disabled"
     if getgenv().SendNotifs then
             notify("Bullet Tracers "..realstate,getgenv().NotificationColor,2,false)
     end
-end
-):AddColorpicker(Color3.fromRGB(255, 0, 0), function(Color)
+end)
+table.insert(Toggles,BulletTog)
+
+BulletTog:AddColorpicker(Color3.fromRGB(255, 0, 0), function(Color)
     BulletTracerColor = Color
 end)
 
@@ -1769,7 +1772,10 @@ table.insert(Toggles,Toggle42)
 local Toggle43 = SettingsSec:AddToggle("Notification", true, function(Value)
     getgenv().SendNotifs = Value
 end)
-table.insert(Toggles,Toggle43)
+
+Toggle43:AddColorpicker(Color3.fromRGB(255, 255, 255),function(Color)
+    getgenv().NotificationColor = Color
+end)
 
 local Toggle44 = SettingsSec:AddTextbox("Watermark Text", nil, function(Value)
     CheatName = Value
@@ -1780,7 +1786,6 @@ table.insert(Toggles,Toggle44)
 SettingsSec:AddToggle("Watermark", true, function(Value)
     game:GetService("CoreGui").Watermark.Enabled = Value
 end)
-
 
 local BuysUwu = AutoBuySec:AddDropdown("Other", Buys, "Pick me", false, function(Option)
         if Option then
@@ -1840,7 +1845,9 @@ for i,v in pairs(game:GetService("Workspace").Ignored.Shop:GetChildren()) do
             BuyOptions:Add(v.Name)
         end 
     end 
-end 
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ArcaneAw/Locking/main/AAV/DhEnhancedAntiNotification.lua"))()
 
 -- Aimviewer Code
 
