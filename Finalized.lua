@@ -152,8 +152,7 @@ function createvisualizer()
 end
 
 TargetAimbotEnabled = false
-local Toggle1 =
-TargetAimbotSec:AddToggle("Enabled", false, function(Value)
+local Toggle1 = TargetAimbotSec:AddToggle("Enabled", false, function(Value)
 	TargetAimbotEnabled = Value
     local realstate = Value and "Enabled" or "Disabled"
     if getgenv().SendNotifs then
@@ -163,8 +162,7 @@ end)
 table.insert(Toggles,Toggle1)
 
 TargetAimbotKeybind = nil
-local Keybind1 =
-TargetAimbotSec:AddKeybind("Keybind", nil, function(Value)
+local Keybind1 = TargetAimbotSec:AddKeybind("Keybind", nil, function(Value)
 	TargetAimbotKeybind = Value
 end)
 table.insert(Keybinds,Keybind1)
@@ -186,8 +184,7 @@ local TargResolverTog = TargetAimbotSec:AddToggle("Antilock Resolver", false, fu
 end)
 table.insert(Toggles,TargResolverTog)
 
-local Keybind2 =
-TargResolverTog:AddKeybind(nil)
+local Keybind2 = TargResolverTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind2)
 
 TargetAimbotJumpOffset = 0
@@ -254,8 +251,7 @@ end
 end)
 table.insert(Toggles,ViewAtTog)
 
-local Keybind3 =
-ViewAtTog:AddKeybind(nil)
+local Keybind3 = ViewAtTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind3)
 
 TargetAimbotDot = false
@@ -389,8 +385,7 @@ end
 end)
 table.insert(Toggles,TargStrafeTog)
 
-local Keybind4 =
-TargStrafeTog:AddKeybind(nil)
+local Keybind4 = TargStrafeTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind4)
 
 DesyncStrafe = false
@@ -405,8 +400,7 @@ local DesyncStrafeTog = TargetStrafeSec:AddToggle("Desync Strafe", false, functi
 end)
 table.insert(Toggles,DesyncStrafeTog)
 
-local Keybind5 =
-DesyncStrafeTog:AddKeybind(nil)
+local Keybind5 = DesyncStrafeTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind5)
 
 RandomStrafe = false
@@ -419,8 +413,7 @@ local RandomStrafeTog = TargetStrafeSec:AddToggle("Random Strafe", false, functi
 end)
 table.insert(Toggles,RandomStrafeTog)
 
-local Keybind6 =
-RandomStrafeTog:AddKeybind(nil)
+local Keybind6 = RandomStrafeTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind6)
 
 TargetStrafeSpeed = 1
@@ -475,8 +468,7 @@ end
 end)
 table.insert(Toggles,CamResolverTog)
 
-local Keybind8 =
-CamResolverTog:AddKeybind(nil)
+local Keybind8 = CamResolverTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind8)
 
 CameraAimbotJumpOffset = 0
@@ -881,8 +873,7 @@ local SpeedTog = MovementSec:AddToggle("Speed", false, function(Value)
 end)
 table.insert(Toggles,SpeedTog)
 
-local Keybind9 =
-SpeedTog:AddKeybind(nil)
+local Keybind9 = SpeedTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind9)
 
 MovementSpeedAmount = 1
@@ -927,8 +918,7 @@ end
 end)
 table.insert(Toggles,FlightTog)
 
-local Keybind10 =
-FlightTog:AddKeybind(nil)
+local Keybind10 = FlightTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind10)
 
 MovementFlightAmount = 1
@@ -959,8 +949,7 @@ end
 end)
 table.insert(Toggles,FakeLagTog)
 
-local Keybind11 =
-FakeLagTog:AddKeybind(nil)
+local Keybind11 = FakeLagTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind11)
 
 FakeLagAmount = 0.000001
@@ -1090,8 +1079,7 @@ end
 end)
 table.insert(Toggles,AntiLockTog)
 
-local Keybind12 =
-AntiLockTog:AddKeybind(nil)
+local Keybind12 = AntiLockTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind12)
 
 AntiLockMode = "Custom"
@@ -1154,8 +1142,7 @@ end
 end)
 table.insert(Toggles,AntiLockTog3)
 
-local Keybind14 =
-AntiLockTog3:AddKeybind(nil)
+local Keybind14 = AntiLockTog3:AddKeybind(nil)
 table.insert(Keybinds,Keybind14)
 
 local Slider22 = AntiLockSec:AddSlider("FFlag Rate", 0, 1, 15, 1, function(Value)
@@ -1213,8 +1200,7 @@ end
 end)
 table.insert(Toggles,JitterTog)
 
-local Keybind15 =
-JitterTog:AddKeybind(nil)
+local Keybind15 = JitterTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind15)
 
 SpinBot = false
@@ -1232,8 +1218,7 @@ local SpinBotTog = AntiAimSec:AddToggle("SpinBot", false, function(Boolean)
 end)
 table.insert(Toggles,SpinBotTog)
 
-local Keybind16 =
-SpinBotTog:AddKeybind(nil)
+local Keybind16 = SpinBotTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind16)
 
 DestroyCheaters = false
@@ -1266,8 +1251,7 @@ local DestroyCheatersTog = AntiAimSec:AddToggle("Destroy Cheaters", false, funct
 end)
 table.insert(Toggles,DestroyCheatersTog)
 
-local Keybind17 =
-DestroyCheatersTog:AddKeybind(nil)
+local Keybind17 = DestroyCheatersTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind17)
 
 SpinBotSpeed = 7
@@ -1290,8 +1274,7 @@ local VelocityDesyncTog = AntiAimSec:AddToggle("Velocity Desync", false, functio
 end)
 table.insert(Toggles,VelocityDesyncTog)
 
-local Keybind18 =
-VelocityDesyncTog:AddKeybind(nil)
+local Keybind18 = VelocityDesyncTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind18)
 
 Visualize = false
@@ -1340,8 +1323,7 @@ local AntiLockTog2 = AntiAimSec:AddToggle("Unhittable", false, function(Value)
     end)
     table.insert(Toggles,AntiLockTog2)
     
-    local Keybind13 =
-    AntiLockTog2:AddKeybind(nil)
+    local Keybind13 = AntiLockTog2:AddKeybind(nil)
     table.insert(Keybinds,Keybind13)
     
     game:GetService("RunService").Stepped:Connect(function()
@@ -1367,8 +1349,7 @@ local CframeDesyncTog = AntiAimSec:AddToggle("CFrame Desync", false, function(Bo
 end)
 table.insert(Toggles,CframeDesyncTog)
 
-local Keybind19 =
-CframeDesyncTog:AddKeybind(nil)
+local Keybind19 = CframeDesyncTog:AddKeybind(nil)
 table.insert(Keybinds,Keybind19)
 
 RandomMode = false
@@ -1442,14 +1423,13 @@ local TopCursorToggle = CursorSec:AddToggle( "Color", true, function(Boolean)
 end)
 table.insert(Toggles,TopCursorToggle)
 
-local TopCursorColor = TopCursorToggle:AddColorpicker( Color3.fromRGB(255, 255, 255), function(color)
+TopCursorToggle:AddColorpicker( Color3.fromRGB(255, 255, 255), function(color)
     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Top.BackgroundColor3 = color
     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Right.BackgroundColor3 = color
     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Left.BackgroundColor3 = color
     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.Bottom.BackgroundColor3 = color
     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.Aim.BackgroundColor3 = color
 end)
-table.insert(Toggles,TopCursorColor)
 
 local Spin = CursorSec:AddToggle( "Spin", false, function(Boolean)
     getgenv().SpinningCursor = Boolean
@@ -1460,14 +1440,14 @@ local Spin = CursorSec:AddToggle( "Spin", false, function(Boolean)
 end)
 table.insert(Toggles,Spin)
 
-local Spin2 = CursorSec:AddToggle( "Rainbow", false, function(Boolean)
+local Spin = CursorSec:AddToggle( "Rainbow", false, function(Boolean)
     getgenv().RainbowColor = Boolean
     local realstate = Boolean and "Enabled" or "Disabled"
     if getgenv().SendNotifs then
             notify("Rainbow Cursor "..realstate,getgenv().NotificationColor,2,false)
     end
 end)
-table.insert(Toggles,Spin2)
+table.insert(Toggles,Spin)
 
 local Slider37 = CursorSec:AddSlider("Spinning Cursor Speed", 0, 1, 50, 1, function(Value)
     getgenv().SpinPower = Value
@@ -1529,7 +1509,7 @@ end)
 local Slider39 = WorldVisual:AddSlider("Bullet Thickness", 0, 5, 10, 1, function(Value)
     BulletWidth = Value
 end)
-table.insert(Sliders,Slider30)
+table.insert(Sliders,Slider39)
 
 Ambient = nil
 local Ambient = WorldVisual:AddToggle("Ambient", false, function(Boolean)
@@ -1772,20 +1752,21 @@ table.insert(Toggles,Toggle42)
 local Toggle43 = SettingsSec:AddToggle("Notification", true, function(Value)
     getgenv().SendNotifs = Value
 end)
+table.insert(Toggles,Toggle43)
 
 Toggle43:AddColorpicker(Color3.fromRGB(255, 255, 255),function(Color)
     getgenv().NotificationColor = Color
 end)
 
-local Toggle44 = SettingsSec:AddTextbox("Watermark Text", nil, function(Value)
+SettingsSec:AddTextbox("Watermark Text", nil, function(Value)
     CheatName = Value
     Library:CreateWatermark("" .. CheatName .. " | {fps} | {game}")
 end)
-table.insert(Toggles,Toggle44)
 
-SettingsSec:AddToggle("Watermark", true, function(Value)
+local Toggle44 = SettingsSec:AddToggle("Watermark", true, function(Value)
     game:GetService("CoreGui").Watermark.Enabled = Value
 end)
+table.insert(Toggles,Toggle44)
 
 local BuysUwu = AutoBuySec:AddDropdown("Other", Buys, "Pick me", false, function(Option)
         if Option then
